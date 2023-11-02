@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+:root {
+    --cream: hsl(30, 38%, 92%);
+    --dark-cyan: hsl(158, 36%, 37%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-greyish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh-0.1px);
+    background-color: var(--cream);
+}
+
+.container img {
+    border-radius: 0.8rem 0.8rem 0 0;
+}
+
+.container {
+    display: grid;
+    background-color: var(--white);
+    margin: 1.5rem;
+    border-radius: 0.8rem;
+}
+
+.second {
+    padding: 1.5rem 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h4 {
+    color: var(--dark-greyish-blue);
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 5px;
+    margin-bottom: 0.6rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.second h1 {
+    color: var(--very-dark-blue);
+    font-family: 'Fraunces', serif;
+    margin-bottom: 0.6rem;
+}
+
+.second p {
+    color: var(--dark-greyish-blue);
+    margin-bottom: 0.6rem;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.price .price-one h1 {
+    color: var(--dark-cyan);
+    margin-bottom: 0.6rem;
+}
+
+.price .price-two h4 {
+    color: var(--dark-greyish-blue);
+    letter-spacing: normal;
+    font-family: 'Fraunces', serif;
+    text-decoration-line: line-through;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
+    width: 100%;
+    border-radius: 0.8rem;
+    background-color: var(--dark-cyan);
+    border: none;
+    margin: 0.6rem;
+    color: #ffffff;
+    font-family: 'Montserrat', serif;
+    align-self: center;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(150, 68%, 22%);
+}
+
+@media screen and (min-width:750px) {
+    .container {
+        grid-template-columns: 1fr 2fr;
+        width: 600px;
+    }
+
+    .container .first img {
+        height: 100%;
+        border-radius: 0.8rem 0 0 0.8rem;
+    }
+
+}
